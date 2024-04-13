@@ -1,10 +1,11 @@
 #pragma once
 
-namespace CD
-{
+#include "../../Libraries/WeigherUI/WeigherUI.hpp"
+
+
   class Application
   {
+    WeigherUI iu;
     public:
-    int run();
+    int run(int argc, char* argv[]);
   };
-}

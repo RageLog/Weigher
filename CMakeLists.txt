@@ -5,13 +5,18 @@ set(APPLICATION_NAME "Weigher")
 set(MAIN_PROJECT_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(OUTPUT_DIR "${MAIN_PROJECT_DIR}/Output/")
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 list(APPEND CMAKE_MODULE_PATH "${MAIN_PROJECT_DIR}/CMakeModules")
 
+
 project(${APPLICATION_NAME} LANGUAGES CXX) 
 add_compile_definitions(APPLICATION_NAME="${APPLICATION_NAME}")
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+include(DirectoryUtilities)
 
 add_library(project_options INTERFACE)
 add_library(project_warnings INTERFACE)
@@ -31,6 +36,7 @@ else()
   endif()
 endif()
 
+add_subdirectory(Libraries)
 add_subdirectory(Runtime)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR}/libraries)

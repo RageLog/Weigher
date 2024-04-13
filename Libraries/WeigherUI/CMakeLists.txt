@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.8)
+
+# project name
+get_filename_component("${CMAKE_CURRENT_SOURCE_DIR}_name" ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+set(LIBRARY_NAME "${${CMAKE_CURRENT_SOURCE_DIR}_name}")
+string(REPLACE " " "_" LIBRARY_NAME ${LIBRARY_NAME})
+project(${LIBRARY_NAME} LANGUAGES CXX) 
+
+include_directories(.)
+
+find_package(Qt6 COMPONENTS Core Quick Gui REQUIRED)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+file(GLOB_RECURSE SOURCES "./*.cpp")
+file(GLOB_RECURSE HEADERS "./*.h*")
+
+source_group(TREE ${MAIN_PROJECT_DIR}/Libraries FILES ${SOURCES} ${HEADERS})
+
+add_library(${LIBRARY_NAME} STATIC ${SOURCES} ${HEADERS})
+
+qt_add_resources(${LIBRARY_NAME} "app_qmls"
+    PREFIX "/"
+    FILES
+    UiComponent/AppQmls/Utility/Theme.qml
+    UiComponent/AppQmls/Utility/qmldir
+    UiComponent/main.qml
+
+)
+
+target_include_directories(${LIBRARY_NAME} PUBLIC /.)
+                                                #PRIVATE ${MAIN_DIR}/Project/Common) # other includes here like this
+
+target_link_libraries(${LIBRARY_NAME} PRIVATE project_options project_warnings Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml) 
+set_target_properties(${LIBRARY_NAME} PROPERTIES FOLDER ${LIBRARY_NAME})
+
+set(TARGET ${LIBRARY_NAME} PROPERTY POSITION_INDEPENDENT_CODE 1)

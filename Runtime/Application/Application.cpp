@@ -1,12 +1,8 @@
 #include "Application.hpp"
 
-#include <iostream>
 
 
-namespace CD {
-    int Application::run()
+    int Application::run(int argc, char* argv[])
     {
-        std::cout << APPLICATION_NAME << "\n";
-        return 0;
+        return this->iu.run(argc, argv);
     }
-}

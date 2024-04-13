@@ -1,7 +1,7 @@
 #include "Application/Application.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
-    CD::Application application;
-    return application.run();
+    Application application;
+    return application.run(argc,argv);
 }
