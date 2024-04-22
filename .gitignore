@@ -23,3 +23,10 @@ cmake-build-debug
 .idea
 /Tests/tests_output
 /Output
+*.includes
+*.files
+*.cxxflags
+*.creator
+*.config
+*.cflags
+*.user

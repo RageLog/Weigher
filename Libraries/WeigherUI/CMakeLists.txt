@@ -25,8 +25,9 @@ add_library(${LIBRARY_NAME} STATIC ${SOURCES} ${HEADERS})
 qt_add_resources(${LIBRARY_NAME} "app_qmls"
     PREFIX "/"
     FILES
-    UiComponent/AppQmls/Utility/Theme.qml
-    UiComponent/AppQmls/Utility/qmldir
+    UiComponent/AppQmls/MainBody.qml
+    UiComponent/BasicQmls/Utility/Theme.qml
+    UiComponent/BasicQmls/Utility/qmldir
     UiComponent/main.qml
 
 )
