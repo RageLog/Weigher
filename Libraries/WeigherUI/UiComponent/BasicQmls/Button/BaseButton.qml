@@ -1,5 +1,7 @@
-import QtQuick
-
+import QtQuick.Controls
+import "../Utility/"
 Button {
-    id: btn
+    id: baseButton
+    width: Theme.sizes.button.base.width
+    height: Theme.sizes.button.base.height
 }

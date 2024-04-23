@@ -1,16 +1,10 @@
-import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "AppQmls"
-ApplicationWindow  {
-    id: root
+import "BasicQmls/Window"
 
-    visible: true
-    //visibility: "Maximized"
+MainWindow 
+{
+    id: root
     visibility: "FullScreen"
-    flags:  Qt.FramelessWindowHint
-    MainBody
-    {
-        anchors.fill: parent
-    }
 
 }

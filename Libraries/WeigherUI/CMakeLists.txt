@@ -27,6 +27,15 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
     FILES
     UiComponent/AppQmls/MainBody.qml
     UiComponent/BasicQmls/Utility/Theme.qml
+    UiComponent/BasicQmls/Button/BaseButton.qml
+    UiComponent/BasicQmls/Button/CloseButton.qml
+    UiComponent/BasicQmls/Button/IconButton.qml
+    UiComponent/BasicQmls/Button/TextButton.qml
+    UiComponent/BasicQmls/Window/BaseWindow.qml
+    UiComponent/BasicQmls/Window/MainWindow.qml
+    UiComponent/BasicQmls/Window/WindowComponents/BaseHeadLine.qml
+    UiComponent/BasicQmls/Window/WindowComponents/MainWindowHeadLine.qml
+    UiComponent/BasicQmls/Utility/Theme.qml
     UiComponent/BasicQmls/Utility/qmldir
     UiComponent/main.qml
 

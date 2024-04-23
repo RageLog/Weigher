@@ -1,5 +1,5 @@
 
-IconButton
+BaseButton
 {
     id: iconButton
 }
