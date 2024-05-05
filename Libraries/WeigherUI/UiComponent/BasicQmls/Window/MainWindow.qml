@@ -8,6 +8,7 @@ BaseWindow
 {
     id: windowRoot
     property alias content: contentLoader.sourceComponent
+    property string title: "Not set"
     flags:  Qt.FramelessWindowHint //| Qt.WindowStaysOnTopHint
     ColumnLayout
     {
@@ -20,6 +21,7 @@ BaseWindow
             color: Theme.colors.window.headLine
             Layout.fillWidth: true
             window:windowRoot
+            text:title
         }
         Loader
         {

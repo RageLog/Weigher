@@ -1,5 +1,5 @@
 pragma Singleton
-import QtQuick 2.6
+import QtQuick
 
     QtObject
     {
@@ -21,6 +21,7 @@ import QtQuick 2.6
             readonly property color hover: "#506478"
             readonly property color press: "#1ba1e2"
         }
+
         readonly property QtObject sizes: QtObject
         {
             readonly property QtObject button: QtObject
@@ -33,7 +34,17 @@ import QtQuick 2.6
             }
             readonly property QtObject text: QtObject
             {
-
+                readonly property int base: 18
+                readonly property int headLine: 20
             }
+        }
+
+        readonly property QtObject fonts:  QtObject
+        {
+            readonly property FontLoader montserrat_regular: FontLoader
+            {
+                source: "../Fonts/Montserrat-Regular.ttf"
+            }
+
         }
     }
