@@ -2,6 +2,6 @@
 
 int main(int argc, char* argv[])
 {
-    Application application;
+    Application application{};
     return application.run(argc,argv);
 }

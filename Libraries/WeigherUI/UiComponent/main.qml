@@ -6,5 +6,6 @@ MainWindow
 {
     id: root
     visibility: "FullScreen"
+    content:MainBody{}
 
 }

@@ -5,13 +5,7 @@
     ColumnLayout
     {
         spacing: 0
-        Rectangle
-        {
-            Layout.alignment: Qt.AlignLeft
-            Layout.preferredHeight: 40
-            color: Theme.colors.window.headLine
-            Layout.fillWidth: true
-        }
+
         Rectangle
         {
             Layout.alignment: Qt.AlignLeft

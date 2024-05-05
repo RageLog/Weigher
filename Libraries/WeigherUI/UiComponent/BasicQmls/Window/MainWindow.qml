@@ -6,23 +6,44 @@ import "../Utility"
 
 BaseWindow
 {
+    id: windowRoot
+    property alias content: contentLoader.sourceComponent
     flags:  Qt.FramelessWindowHint //| Qt.WindowStaysOnTopHint
     ColumnLayout
     {
+        id: contentContainer
         spacing: 0
         anchors.fill: parent
         MainWindowHeadLine
         {
             Layout.alignment: Qt.AlignLeft
-            background.color: Theme.colors.window.headLine
+            color: Theme.colors.window.headLine
             Layout.fillWidth: true
+            window:windowRoot
         }
-        Item
+        Loader
         {
-            id: contentItem
-            Layout.alignment: Qt.AlignLeft
+            id: contentLoader
             Layout.fillWidth: true
             Layout.fillHeight: true
+        }
+        Component.onCompleted: 
+        {
+            if(content === null)
+            {
+                content = rect;
+            }
+        }
+    }
+    Component
+    {
+        id: rect
+        Text
+        {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            text: "No content set"
+            color: "white"
         }
     }
 }

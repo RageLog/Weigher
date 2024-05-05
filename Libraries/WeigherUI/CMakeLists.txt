@@ -25,6 +25,7 @@ add_library(${LIBRARY_NAME} STATIC ${SOURCES} ${HEADERS})
 qt_add_resources(${LIBRARY_NAME} "app_qmls"
     PREFIX "/"
     FILES
+    UiComponent/Icons/icon_close.svg
     UiComponent/AppQmls/MainBody.qml
     UiComponent/BasicQmls/Utility/Theme.qml
     UiComponent/BasicQmls/Button/BaseButton.qml
