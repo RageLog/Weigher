@@ -4,6 +4,8 @@ import QtQuick.Controls
 
 import "../../Utility"
 import "../../Text"
+import "../../Button"
+
 Rectangle {
     id: backgroundRectangle
 
@@ -18,10 +20,20 @@ Rectangle {
     BaseText
     {
         anchors.left: backgroundRectangle.left
-        anchors.centerIn: backgroundRectangle.Center
-        anchors.leftMargin: 20
+        anchors.verticalCenter: backgroundRectangle.verticalCenter
+        anchors.leftMargin: 15
         text:backgroundRectangle.text
         font.pointSize: Theme.sizes.text.headLine
+    }
+    CloseButton
+    {
+        anchors.right: backgroundRectangle.right
+        anchors.verticalCenter: backgroundRectangle.verticalCenter
+        anchors.rightMargin: 15
+        onClicked:
+        {
+            window.close()
+        }
     }
 
 }

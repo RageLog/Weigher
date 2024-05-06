@@ -35,6 +35,7 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
     UiComponent/BasicQmls/Window/BaseWindow.qml
     UiComponent/BasicQmls/Window/MainWindow.qml
     UiComponent/BasicQmls/Text/BaseText.qml
+    UiComponent/BasicQmls/ToolTip/BaseToolTip.qml
     UiComponent/BasicQmls/Fonts/Montserrat-Regular.ttf
     UiComponent/BasicQmls/Window/WindowComponents/BaseHeadLine.qml
     UiComponent/BasicQmls/Window/WindowComponents/MainWindowHeadLine.qml

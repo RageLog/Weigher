@@ -17,9 +17,13 @@ import QtQuick
                 readonly property color base: "#babcc1"
 
             }
-            readonly property color panel: "#282828"
-            readonly property color hover: "#506478"
-            readonly property color press: "#1ba1e2"
+            readonly property QtObject button: QtObject
+            {
+                readonly property color background: ""//TODO::
+                readonly property color border: "#"
+                readonly property color hover: "#506478"
+                readonly property color press: "#1ba1e2"
+            }
         }
 
         readonly property QtObject sizes: QtObject
