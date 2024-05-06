@@ -8,7 +8,7 @@ project(${LIBRARY_NAME} LANGUAGES CXX)
 
 include_directories(.)
 
-find_package(Qt6 COMPONENTS Core Quick Gui REQUIRED)
+find_package(Qt6 COMPONENTS Core Quick Gui Widgets QuickControls2 REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -27,7 +27,6 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
     FILES
     UiComponent/Icons/icon_close.svg
     UiComponent/AppQmls/MainBody.qml
-    UiComponent/BasicQmls/Utility/Theme.qml
     UiComponent/BasicQmls/Button/BaseButton.qml
     UiComponent/BasicQmls/Button/CloseButton.qml
     UiComponent/BasicQmls/Button/IconButton.qml
@@ -48,7 +47,7 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
 target_include_directories(${LIBRARY_NAME} PUBLIC /.)
                                                 #PRIVATE ${MAIN_DIR}/Project/Common) # other includes here like this
 
-target_link_libraries(${LIBRARY_NAME} PRIVATE project_options project_warnings Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml) 
+target_link_libraries(${LIBRARY_NAME} PRIVATE project_options project_warnings Qt6::Core Qt6::Gui Qt6::Quick Qt6::Qml Qt6::Widgets Qt6::QuickControls2) 
 set_target_properties(${LIBRARY_NAME} PROPERTIES FOLDER ${LIBRARY_NAME})
 
 set(TARGET ${LIBRARY_NAME} PROPERTY POSITION_INDEPENDENT_CODE 1)

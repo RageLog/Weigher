@@ -15,12 +15,11 @@ import QtQuick
             readonly property QtObject text: QtObject
             {
                 readonly property color base: "#babcc1"
-
             }
             readonly property QtObject button: QtObject
             {
-                readonly property color background: ""//TODO::
-                readonly property color border: "#"
+                readonly property color background: "transparent"
+                readonly property color border: "#000000"//TODO::
                 readonly property color hover: "#506478"
                 readonly property color press: "#1ba1e2"
             }

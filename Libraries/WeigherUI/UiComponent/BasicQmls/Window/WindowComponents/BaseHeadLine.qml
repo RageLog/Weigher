@@ -30,10 +30,7 @@ Rectangle {
         anchors.right: backgroundRectangle.right
         anchors.verticalCenter: backgroundRectangle.verticalCenter
         anchors.rightMargin: 15
-        onClicked:
-        {
-            window.close()
-        }
+        parentWindow: window
     }
 
 }
