@@ -18,8 +18,9 @@ import QtQuick
             }
             readonly property QtObject button: QtObject
             {
+                readonly property color base: "#babcc1"
                 readonly property color background: "transparent"
-                readonly property color border: "#000000"//TODO::
+                readonly property color border: "#000000"//TODO:: Currently not in use
                 readonly property color hover: "#506478"
                 readonly property color press: "#1ba1e2"
             }
@@ -32,7 +33,8 @@ import QtQuick
                 readonly property QtObject base: QtObject
                 {
                     readonly property int width: 32
-                    readonly property int height: 32     
+                    readonly property int height: 32
+                    readonly property int radius: 7
                 }
             }
             readonly property QtObject text: QtObject
