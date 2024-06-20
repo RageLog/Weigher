@@ -16,8 +16,6 @@ BaseButton
     property color backgroundColor: Theme.colors.button.background
     property int radius: Theme.sizes.button.base.radius
 
-    property int imageRotation: 0
-
     icon.source: imageSource
     icon.color: buttonColor
     icon.width: parent.width
