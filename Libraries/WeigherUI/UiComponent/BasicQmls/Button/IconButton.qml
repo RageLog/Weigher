@@ -49,6 +49,6 @@ BaseButton
         visible:  iconButton.hovered | iconButton.pressed
         border.color: iconButton.pressed ? pressColor : hoverColor
         border.width: showBorder ? 1 : 0
-        radius:7//TO-DO::theme
+        radius:iconButton.radius
     }
 }
