@@ -15,6 +15,8 @@ import QtQuick
             readonly property QtObject text: QtObject
             {
                 readonly property color base: "#babcc1"
+                readonly property color tooltip: "#313233"
+
             }
             readonly property QtObject button: QtObject
             {

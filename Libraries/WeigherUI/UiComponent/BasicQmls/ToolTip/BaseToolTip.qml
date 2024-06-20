@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "../Text"
+import "../Utility"
 
 ToolTip
 {
@@ -12,6 +13,7 @@ ToolTip
         id:tx
         text:root.toolTipText
         font.bold: true
+        color: Theme.colors.text.tooltip
     }
     background: Rectangle
     {
@@ -19,6 +21,6 @@ ToolTip
         radius:5
         Layout.fillWidth: true
         Layout.fillHeight: true
-        opacity:0.90
+        opacity:0.80
     }
 }
