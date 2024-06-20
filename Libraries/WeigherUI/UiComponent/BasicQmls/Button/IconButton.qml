@@ -14,7 +14,7 @@ BaseButton
     property color pressColor: clickable ? Theme.colors.button.press : hoverColor
     property color hoverColor: Theme.colors.button.hover
     property color backgroundColor: Theme.colors.button.background
-    property color radius: Theme.sizes.button.base.radius
+    property int radius: Theme.sizes.button.base.radius
 
     property int imageRotation: 0
 
