@@ -25,6 +25,8 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
     FILES
     UiComponent/Icons/icon_close.svg
     UiComponent/AppQmls/MainBody.qml
+    UiComponent/BasicQmls/ComboBox/BaseComboBox.qml
+    UiComponent/BasicQmls/TextField/BaseTextField.qml
     UiComponent/BasicQmls/Button/BaseButton.qml
     UiComponent/BasicQmls/Button/CloseButton.qml
     UiComponent/BasicQmls/Button/IconButton.qml
