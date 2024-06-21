@@ -11,9 +11,7 @@ include_directories(.)
 find_package(Qt6 COMPONENTS Core Quick Gui Widgets QuickControls2 REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
+qt_standard_project_setup()
 
 file(GLOB_RECURSE SOURCES "./*.cpp")
 file(GLOB_RECURSE HEADERS "./*.h*")
@@ -41,7 +39,6 @@ qt_add_resources(${LIBRARY_NAME} "app_qmls"
     UiComponent/BasicQmls/Utility/Theme.qml
     UiComponent/BasicQmls/Utility/qmldir
     UiComponent/main.qml
-
 )
 
 target_include_directories(${LIBRARY_NAME} PUBLIC /.)
