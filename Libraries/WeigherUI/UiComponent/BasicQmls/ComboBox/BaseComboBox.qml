@@ -7,11 +7,11 @@ import "../Text"
 import "../Utility"
 
 //To-do: refactor the code
-ComboBox 
+ComboBox
 {
     id: comboBox
-    width: 200
-    height: 40
+    width: Theme.sizes.comboBox.base.width
+    height: Theme.sizes.comboBox.base.height
 
     model:["one","two","three","four"] // To-do: remove later
 
@@ -20,8 +20,7 @@ ComboBox
     {
         implicitWidth: comboBox.implicitWidth
         implicitHeight: comboBox.implicitHeight
-        color: "transparent"
-        border.width: comboBox.activeFocus ? 2 : 0.6 // To-do: think about it
+        color: "blue"
     }
 
     indicator: Canvas
@@ -32,11 +31,6 @@ ComboBox
         width: 12
         height: 8
         contextType: "2d"
-
-        Connections {
-            target: comboBox
-            function onPressedChanged() { canvas.requestPaint(); }
-        }
 
         onPaint: {
             context.reset();
@@ -62,43 +56,8 @@ ComboBox
             text: comboBox.displayText
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignVCenter
-            Layout.leftMargin: 10 //TO-DO:theme
-            //color: "Theme."  //TO-DO: property and theme
+            Layout.leftMargin: 10
           }
         }
     }
-
-    //delegate: ItemDelegate
-    //{
-    //    background: Rectangle
-    //    {
-    //        anchors.fill: parent
-    //        radius: 8
-    //        color:  "red"
-    //    }
-    //}
-
-    //popup: Popup{
-    //        y:comboBox.height + 2
-    //        width: comboBox.implicitWidth * 1.26
-    //        implicitHeight: contentItem.implicitHeight > 250 ? 250 : contentItem.implicitHeight
-    //        padding: 4
-    //        contentItem: ListView{
-    //            leftMargin: 5
-    //            implicitHeight: contentHeight
-    //            keyNavigationEnabled: true
-    //            model:comboBox.popup.visible ? comboBox.delegateModel : null
-    //            clip: true
-    //            focus: true
-    //            currentIndex: comboBox.highlightedIndex
-    //        }
-
-    //        background: Rectangle{
-    //            anchors.fill: parent
-    //            color: "yellow"
-    //            radius: 6
-    //            border.width: 0.6
-    //            clip: true
-    //        }
-    //    }
 }
