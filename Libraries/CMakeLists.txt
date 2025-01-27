@@ -1,5 +1,5 @@
 # cmake version to be used
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.10)
 project(Libraries)
 
 GetSubDirList(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR})
